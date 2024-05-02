@@ -9,19 +9,25 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
-<body>
-    <div class="container">
-    <button class="button-minus buttons" onclick="
-    number = number - 1;
-    document.querySelector('span').innerHTML = `${number}`;
-    ">-</button>
+<body class="container">
+    <button class="button-minus buttons" onclick="plusNum()">+</button>
     <span></span>
-    <button class="button-plus  buttons" onclick="
-    number = number + 1;
-    document.querySelector('span').innerHTML = `${number}`;
-    ">+</button>
-    </div>
+    <button class="button-plus  buttons" onclick="minusNum()">-</button>
 
-    <script src="index.js"></script>
+    <script>
+        var number = 0
+        document.querySelector('span').innerHTML = number;
+
+        const plusNum = () => {
+             // number = number + 1;
+             number++
+             document.querySelector('span').innerHTML = number;
+        }
+
+        const minusNum = () => {
+             number--
+             document.querySelector('span').innerHTML = number;
+        }
+    </script>
 </body>
 </html>
